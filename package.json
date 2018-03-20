@@ -75,6 +75,8 @@
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.2",
+    "postcss-merge-rules": "^2.1.2",
+    "postcss-nested": "^3.0.0",
     "puppeteer": "^1.2.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
