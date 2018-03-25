@@ -12,8 +12,8 @@ describe('<feather>', () => {
           template: '<feather type="feather"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--spin')).to.be.false;
-        expect(vm.$el.classList.contains('vue-feather--pulse')).to.be.false;
+        expect(vm.$el.classList.contains('feather--spin')).to.be.false;
+        expect(vm.$el.classList.contains('feather--pulse')).to.be.false;
       });
 
       it('spin', () => {
@@ -21,7 +21,7 @@ describe('<feather>', () => {
           template: '<feather type="feather" animation="spin"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--spin')).to.be.true;
+        expect(vm.$el.classList.contains('feather--spin')).to.be.true;
       });
 
       it('pulse', () => {
@@ -29,7 +29,7 @@ describe('<feather>', () => {
           template: '<feather type="feather" animation="pulse"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--pulse')).to.be.true;
+        expect(vm.$el.classList.contains('feather--pulse')).to.be.true;
       });
     });
 
@@ -39,8 +39,8 @@ describe('<feather>', () => {
           template: '<feather type="feather"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--slow')).to.be.false;
-        expect(vm.$el.classList.contains('vue-feather--fast')).to.be.false;
+        expect(vm.$el.classList.contains('feather--slow')).to.be.false;
+        expect(vm.$el.classList.contains('feather--fast')).to.be.false;
       });
 
       it('slow', () => {
@@ -48,7 +48,7 @@ describe('<feather>', () => {
           template: '<feather type="feather" animation-speed="slow"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--slow')).to.be.true;
+        expect(vm.$el.classList.contains('feather--slow')).to.be.true;
       });
 
       it('fast', () => {
@@ -56,7 +56,7 @@ describe('<feather>', () => {
           template: '<feather type="feather" animation-speed="fast"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--fast')).to.be.true;
+        expect(vm.$el.classList.contains('feather--fast')).to.be.true;
       });
     });
 
@@ -153,7 +153,7 @@ describe('<feather>', () => {
           template: '<feather type="feather"></feather>',
         }).$mount();
 
-        expect(vm.$el.classList.contains('vue-feather--feather')).to.be.true;
+        expect(vm.$el.classList.contains('feather--feather')).to.be.true;
         expect(vm.$el.querySelector('svg').innerHTML).to.equal(icons.feather.contents);
       });
     });

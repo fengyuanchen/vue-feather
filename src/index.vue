@@ -76,10 +76,10 @@
           },
 
           class: {
-            'vue-feather': true,
-            [`vue-feather--${type}`]: type,
-            [`vue-feather--${animation}`]: animation,
-            [`vue-feather--${animationSpeed}`]: animationSpeed,
+            feather: true,
+            [`feather--${type}`]: type,
+            [`feather--${animation}`]: animation,
+            [`feather--${animationSpeed}`]: animationSpeed,
           },
 
           on: this.$listeners,
@@ -101,7 +101,7 @@
                 width: size,
               },
 
-              class: [icon.attrs.class, 'vue-feather__content'],
+              class: [icon.attrs.class, 'feather__content'],
 
               domProps: {
                 innerHTML: icon.contents,
@@ -115,7 +115,7 @@
 </script>
 
 <style scoped>
-  @keyframes vue-feather--spin {
+  @keyframes feather--spin {
     from {
       transform: rotate(0);
     }
@@ -125,16 +125,16 @@
     }
   }
 
-  @block vue-feather {
+  @block feather {
     display: inline-block;
     overflow: hidden;
 
     @modifier spin {
-      animation: vue-feather--spin 2s linear infinite;
+      animation: feather--spin 2s linear infinite;
     }
 
     @modifier pulse {
-      animation: vue-feather--spin 2s infinite steps(8);
+      animation: feather--spin 2s infinite steps(8);
     }
 
     @modifier slow {
