@@ -1,11 +1,11 @@
 /*!
- * vue-feather v0.1.0
+ * vue-feather v0.2.0
  * https://github.com/fengyuanchen/vue-feather
  *
  * Copyright (c) 2018 Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2018-03-20T15:12:41.559Z
+ * Date: 2018-03-25T07:56:13.658Z
  */
 
 'use strict';
@@ -47,7 +47,7 @@ var _extends = Object.assign || function (target) {
   if (typeof document !== 'undefined') {
     var head = document.head || document.getElementsByTagName('head')[0],
         style = document.createElement('style'),
-        css = "@-webkit-keyframes vue-feather--spin { from { -webkit-transform: rotate(0); transform: rotate(0); } to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @keyframes vue-feather--spin { from { -webkit-transform: rotate(0); transform: rotate(0); } to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } .vue-feather[data-v-1a4d8e3c] { display: inline-block; overflow: hidden; } .vue-feather--spin[data-v-1a4d8e3c] { -webkit-animation: vue-feather--spin 2s linear infinite; animation: vue-feather--spin 2s linear infinite; } .vue-feather--pulse[data-v-1a4d8e3c] { -webkit-animation: vue-feather--spin 2s infinite steps(8); animation: vue-feather--spin 2s infinite steps(8); } .vue-feather--slow[data-v-1a4d8e3c] { -webkit-animation-duration: 3s; animation-duration: 3s; } .vue-feather--fast[data-v-1a4d8e3c] { -webkit-animation-duration: 1s; animation-duration: 1s; } .vue-feather__content[data-v-1a4d8e3c] { display: block; height: inherit; width: inherit; } ";style.type = 'text/css';if (style.styleSheet) {
+        css = "@-webkit-keyframes feather--spin { from { -webkit-transform: rotate(0); transform: rotate(0); } to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @keyframes feather--spin { from { -webkit-transform: rotate(0); transform: rotate(0); } to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } .feather[data-v-1a4d8e3c] { display: inline-block; overflow: hidden; } .feather--spin[data-v-1a4d8e3c] { -webkit-animation: feather--spin 2s linear infinite; animation: feather--spin 2s linear infinite; } .feather--pulse[data-v-1a4d8e3c] { -webkit-animation: feather--spin 2s infinite steps(8); animation: feather--spin 2s infinite steps(8); } .feather--slow[data-v-1a4d8e3c] { -webkit-animation-duration: 3s; animation-duration: 3s; } .feather--fast[data-v-1a4d8e3c] { -webkit-animation-duration: 1s; animation-duration: 1s; } .feather__content[data-v-1a4d8e3c] { display: block; height: inherit; width: inherit; } ";style.type = 'text/css';if (style.styleSheet) {
       style.styleSheet.cssText = css;
     } else {
       style.appendChild(document.createTextNode(css));
@@ -128,8 +128,8 @@ var index = { _scopeId: 'data-v-1a4d8e3c',
       },
 
       class: (_class = {
-        'vue-feather': true
-      }, defineProperty(_class, 'vue-feather--' + type, type), defineProperty(_class, 'vue-feather--' + animation, animation), defineProperty(_class, 'vue-feather--' + animationSpeed, animationSpeed), _class),
+        feather: true
+      }, defineProperty(_class, 'feather--' + type, type), defineProperty(_class, 'feather--' + animation, animation), defineProperty(_class, 'feather--' + animationSpeed, animationSpeed), _class),
 
       on: this.$listeners
     }, [icon ? createElement('svg', {
@@ -143,7 +143,7 @@ var index = { _scopeId: 'data-v-1a4d8e3c',
         width: size
       }),
 
-      class: [icon.attrs.class, 'vue-feather__content'],
+      class: [icon.attrs.class, 'feather__content'],
 
       domProps: {
         innerHTML: icon.contents

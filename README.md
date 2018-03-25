@@ -4,8 +4,7 @@
 
 > A Vue component wrapper for [Feather](https://feathericons.com/).
 
-- [Docs](src/README.md)
-- [Demo](https://fengyuanchen.github.io/vue-feather)
+- [Docs & demo](https://fengyuanchen.github.io/vue-feather)
 
 ## Main
 

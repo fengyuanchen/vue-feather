@@ -67,7 +67,7 @@
     color: #0074d9;
   }
 
-  .icons > li > .feather {
+  .icons > li > i {
     vertical-align: middle;
   }
 
