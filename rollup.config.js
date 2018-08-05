@@ -1,30 +1,27 @@
-const babel = require('rollup-plugin-babel');
-const commonjs = require('rollup-plugin-commonjs');
-const nodeResolve = require('rollup-plugin-node-resolve');
-const vue = require('rollup-plugin-vue');
-const pascalCase = require('pascal-case');
-const pkg = require('./package');
+import babel from 'rollup-plugin-babel';
+import changeCase from 'change-case';
+import commonjs from 'rollup-plugin-commonjs';
+import createBanner from 'create-banner';
+import nodeResolve from 'rollup-plugin-node-resolve';
+import vue from 'rollup-plugin-vue';
+import pkg from './package.json';
 
-const now = new Date();
-const banner = `/*!
- * ${pkg.name} v${pkg.version}
- * https://github.com/${pkg.repository}
- *
- * Copyright (c) ${now.getFullYear()} ${pkg.author.name}
- * Released under the ${pkg.license} license
- *
- * Date: ${now.toISOString()}
- */
-`;
+pkg.name = pkg.name.replace(/^.+\//, '');
 
-module.exports = {
+const banner = createBanner({
+  data: {
+    year: '2018-present',
+  },
+});
+
+export default {
   input: 'src/index.vue',
   output: [
     {
       banner,
+      name: changeCase.pascalCase(pkg.name),
       file: `dist/${pkg.name}.js`,
       format: 'umd',
-      name: pascalCase(pkg.name),
       globals: {
         'feather-icons': 'feather',
         vue: 'Vue',
@@ -38,7 +35,7 @@ module.exports = {
     {
       banner,
       file: `dist/${pkg.name}.esm.js`,
-      format: 'es',
+      format: 'esm',
     },
   ],
   external: ['vue', 'feather-icons'],
@@ -46,7 +43,9 @@ module.exports = {
     nodeResolve(),
     commonjs(),
     vue({
-      css: true,
+      template: {
+        isProduction: true,
+      },
     }),
     babel({
       exclude: 'node_modules/**',
