@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 (Aug 5, 2018)
+
+- Use Sass instead of PostCSS.
+
 ## 0.2.0 (Mar 25, 2018)
 
 - Rename element class name from `vue-feather` to `feather`.
