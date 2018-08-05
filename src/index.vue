@@ -114,7 +114,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   @keyframes feather--spin {
     from {
       transform: rotate(0);
@@ -125,27 +125,27 @@
     }
   }
 
-  @block feather {
+  .feather {
     display: inline-block;
     overflow: hidden;
 
-    @modifier spin {
+    &--spin {
       animation: feather--spin 2s linear infinite;
     }
 
-    @modifier pulse {
+    &--pulse {
       animation: feather--spin 2s infinite steps(8);
     }
 
-    @modifier slow {
+    &--slow {
       animation-duration: 3s;
     }
 
-    @modifier fast {
+    &--fast {
       animation-duration: 1s;
     }
 
-    @element content {
+    &__content {
       display: block;
       height: inherit;
       width: inherit;

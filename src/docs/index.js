@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './app.vue';
 import Demo from './components/demo.vue';
-import VueFeather from '../../src/index.vue';
+import VueFeather from '../index.vue';
 
 Vue.component('demo', Demo);
 Vue.component(VueFeather.name, VueFeather);
