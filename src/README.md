@@ -50,7 +50,7 @@
 <style scoped>
   .icons {
     display: grid;
-    grid-gap: .5rem;
+    grid-gap: 0.5rem;
     grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     list-style: none;
     margin: 0;
@@ -59,8 +59,8 @@
 
   .icons > li {
     background-color: #f8f8f8;
-    padding: .5rem 1rem;
-    transition: color .15s;
+    padding: 0.5rem 1rem;
+    transition: color 0.15s;
   }
 
   .icons > li:hover {
@@ -73,8 +73,8 @@
 
   .icons > li > span {
     color: gray;
-    margin-left: .5rem;
-    transition: color .15s;
+    margin-left: 0.5rem;
+    transition: color 0.15s;
   }
 
   .icons > li:hover > span {
@@ -163,7 +163,7 @@
   p {
     align-items: center;
     display: flex;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   p:last-child {
@@ -171,13 +171,13 @@
   }
 
   p > span {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     text-align: right;
     width: 4rem;
   }
 
   p > i {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 </style>
 ```
