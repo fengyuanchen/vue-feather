@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 (Jan 26, 2019)
+
+- Support to use as a Vue plugin: `Vue.use(VueFeather)`.
+- Support to use as a Vue component: `Vue.component(VueFeather.name, VueFeather)`.
+- Register the component automatically once loaded in the browser.
+
 ## 0.2.1 (Aug 5, 2018)
 
 - Use Sass instead of PostCSS.

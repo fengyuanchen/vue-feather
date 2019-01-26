@@ -1,8 +1,8 @@
 # vue-feather
 
-[![Build Status](https://travis-ci.org/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
+[![Build Status](https://img.shields.io/travis/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
 
-> A Vue component wrapper for [Feather](https://feathericons.com/).
+> [Feather](https://feathericons.com/) component for [Vue.js](https://vuejs.org).
 
 - [Docs](src/README.md)
 - [Demo](https://fengyuanchen.github.io/vue-feather)
@@ -22,7 +22,7 @@ dist/
 ### Installation
 
 ```shell
-npm install vue-feather vue feather-icons
+npm install vue feather-icons vue-feather
 ```
 
 In browser:
@@ -30,7 +30,7 @@ In browser:
 ```html
 <script src="/path/to/vue.js"></script><!-- Vue.js is required -->
 <script src="/path/to/feather.js"></script><!-- Feather is required -->
-<script src="/path/to/vue-feather.js"></script>
+<script src="/path/to/vue-feather.js"></script><!-- Register automatically once loaded -->
 ```
 
 ### Usage
@@ -39,17 +39,15 @@ In browser:
 import Vue from 'vue';
 import VueFeather from 'vue-feather';
 
+Vue.use(VueFeather);
+// Or
 Vue.component(VueFeather.name, VueFeather);
+// Or
+Vue.component('vue-feather', VueFeather);
 ```
 
 ```html
 <feather type="feather"></feather>
-```
-
-In browser:
-
-```html
-<script>Vue.component(VueFeather.name, VueFeather);</script>
 ```
 
 ## Browser support
