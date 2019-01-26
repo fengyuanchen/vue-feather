@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { icons } from 'feather-icons';
-import VueFeather from '../src/index.vue';
+import VueFeather from '../src';
 
 Vue.component(VueFeather.name, VueFeather);
 
