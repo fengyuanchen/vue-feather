@@ -1,15 +1,13 @@
 # vue-feather
 
-### [Leia esta página em português](https://github.com/fengyuanchen/vue-feather/blob/master/README-pt.md)
-
 [![Build Status](https://img.shields.io/travis/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
 
-> [Feather](https://feathericons.com/) component for [Vue.js](https://vuejs.org).
+> [Feather Icon](https://feathericons.com/) em componentes para [Vue.js](https://vuejs.org).
 
-- [Docs](src/README.md)
-- [Demo](https://fengyuanchen.github.io/vue-feather)
+- [Documentação](src/README.md)
+- [Demonstração](https://fengyuanchen.github.io/vue-feather)
 
-## Main
+## Estrutura de arquivos
 
 ```text
 dist/
@@ -19,48 +17,50 @@ dist/
 └── vue-feather.esm.js    (ES Module)
 ```
 
-## Getting started
+## Começando
 
-### Installation
+### Instalação
 
 ```shell
 npm install vue feather-icons vue-feather
 ```
 
-In browser:
+No navegador:
 
 ```html
-<script src="/path/to/vue.js"></script><!-- Vue.js is required -->
-<script src="/path/to/feather.js"></script><!-- Feather is required -->
-<script src="/path/to/vue-feather.js"></script><!-- Register automatically once loaded -->
+<script src="/path/to/vue.js"></script><!-- Vue.js é Obrigatório -->
+<script src="/path/to/feather.js"></script><!-- Feather icon é obrigatório -->
+<script src="/path/to/vue-feather.js"></script><!-- Registra o a bliblioteca quando carrega a página -->
 ```
 
-### Usage
+### Como usar:
 
 ```js
 import Vue from 'vue';
 import VueFeather from 'vue-feather';
 
 Vue.use(VueFeather);
-// Or
+        // ou
 Vue.component(VueFeather.name, VueFeather);
-// Or
+                // ou
 Vue.component('vue-feather', VueFeather);
 ```
+
+Usando no HTML
 
 ```html
 <feather type="feather"></feather>
 ```
 
-## Browser support
+## Navegadores suportados
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Opera (latest)
-- Edge (latest)
+- Chrome (Ultima versão)
+- Firefox (Ultima versão)
+- Safari (Ultima versão)
+- Opera (Ultima versão)
+- Edge (Ultima versão)
 - Internet Explorer 9+
 
-## License
+## Licença
 
 [MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com)
