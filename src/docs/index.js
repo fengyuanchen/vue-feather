@@ -8,5 +8,5 @@ Vue.component(VueFeather.name, VueFeather);
 
 export default new Vue({
   el: '#app',
-  render: createElement => createElement(App),
+  render: (createElement) => createElement(App),
 });
