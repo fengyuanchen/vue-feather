@@ -1,11 +1,11 @@
 /*!
- * vue-feather v1.0.0
+ * vue-feather v1.0.1
  * https://fengyuanchen.github.io/vue-feather
  *
  * Copyright 2018-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2019-01-26T05:54:31.324Z
+ * Date: 2020-06-06T12:10:30.203Z
  */
 
 import feather from 'feather-icons';
@@ -25,20 +25,35 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-function _objectSpread(target) {
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
 
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
   }
 
   return target;
@@ -114,7 +129,7 @@ var script = {
       }, _defineProperty(_class, "feather--".concat(type), type), _defineProperty(_class, "feather--".concat(animation), animation), _defineProperty(_class, "feather--".concat(animationSpeed), animationSpeed), _class),
       on: this.$listeners
     }, [icon ? createElement('svg', {
-      attrs: _objectSpread({}, icon.attrs, {
+      attrs: _objectSpread2(_objectSpread2({}, icon.attrs), {}, {
         fill: this.fill,
         height: size,
         stroke: this.stroke,
@@ -188,8 +203,8 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
 
     options._ssrRegister = hook;
   } else if (style) {
-    hook = shadowMode ? function () {
-      style.call(this, createInjectorShadow(this.$root.$options.shadowRoot));
+    hook = shadowMode ? function (context) {
+      style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
     } : function (context) {
       style.call(this, createInjector(context));
     };
@@ -214,8 +229,6 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
   return script;
 }
 
-var normalizeComponent_1 = normalizeComponent;
-
 var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
 
 function createInjector(context) {
@@ -224,7 +237,7 @@ function createInjector(context) {
   };
 }
 
-var HEAD = document.head || document.getElementsByTagName('head')[0];
+var HEAD;
 var styles = {};
 
 function addStyle(id, css) {
@@ -250,6 +263,11 @@ function addStyle(id, css) {
       style.element = document.createElement('style');
       style.element.type = 'text/css';
       if (css.media) style.element.setAttribute('media', css.media);
+
+      if (HEAD === undefined) {
+        HEAD = document.head || document.getElementsByTagName('head')[0];
+      }
+
       HEAD.appendChild(style.element);
     }
 
@@ -266,12 +284,8 @@ function addStyle(id, css) {
   }
 }
 
-var browser = createInjector;
-
 /* script */
-var __vue_script__ = script; // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-
-script.__file = "feather.vue";
+var __vue_script__ = script;
 /* template */
 
 /* style */
@@ -296,14 +310,16 @@ var __vue_module_identifier__ = undefined;
 var __vue_is_functional_template__ = undefined;
 /* style inject SSR */
 
-var Feather = normalizeComponent_1({}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, browser, undefined);
+/* style inject shadow dom */
 
-Feather.install = function (Vue) {
-  Vue.component(Feather.name, Feather);
+var __vue_component__ = /*#__PURE__*/normalizeComponent({}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, createInjector, undefined, undefined);
+
+__vue_component__.install = function (Vue) {
+  Vue.component(__vue_component__.name, __vue_component__);
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(Feather);
+  window.Vue.use(__vue_component__);
 }
 
-export default Feather;
+export default __vue_component__;

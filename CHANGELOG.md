@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (Jun 6, 2020)
+
+- Rebuild with the latest `vue-loader` for better compatibility (#2).
+
 ## 1.0.0 (Jan 26, 2019)
 
 - Support to use as a Vue plugin: `Vue.use(VueFeather)`.
