@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
 
-> [Feather Icon](https://feathericons.com/) em componentes para [Vue.js](https://vuejs.org).
+> [Feather Icon](https://feathericons.com/) em componentes para [Vue.js](https://vuejs.org/).
 
 - [Documentação](src/README.md)
 - [Demonstração](https://fengyuanchen.github.io/vue-feather)
@@ -63,4 +63,4 @@ Usando no HTML
 
 ## Licença
 
-[MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com)
+[MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com/)

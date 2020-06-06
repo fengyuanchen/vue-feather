@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
 
-> [Feather](https://feathericons.com/) component for [Vue.js](https://vuejs.org).
+> [Feather](https://feathericons.com/) component for [Vue.js](https://vuejs.org/).
 
 - [Docs](src/README.md)
 - [Demo](https://fengyuanchen.github.io/vue-feather)
@@ -62,4 +62,4 @@ Vue.component('vue-feather', VueFeather);
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com)
+[MIT](https://opensource.org/licenses/MIT) © [Chen Fengyuan](https://chenfengyuan.com/)
