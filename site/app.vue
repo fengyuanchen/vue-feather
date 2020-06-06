@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import pkg from '../../package.json';
+import pkg from '../package.json';
 import Readme from '../README.md';
 
 export default {
