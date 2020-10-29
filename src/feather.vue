@@ -3,7 +3,7 @@ import feather from 'feather-icons';
 
 export default {
   name: 'Feather',
-
+  functional: true,
   props: {
     animation: {
       type: String,
@@ -63,17 +63,18 @@ export default {
     },
   },
 
-  render(createElement) {
+  render(createElement, { listeners, props }) {
     const {
       animation,
       animationSpeed,
       size,
       type,
-    } = this;
+    } = props;
+
     const icon = feather.icons[type];
 
     return createElement(
-      this.tag,
+      props.tag,
 
       {
         attrs: {
@@ -89,7 +90,7 @@ export default {
           [`feather--${animationSpeed}`]: animationSpeed,
         },
 
-        on: this.$listeners,
+        on: listeners,
       },
 
       [
@@ -99,12 +100,12 @@ export default {
           {
             attrs: {
               ...icon.attrs,
-              fill: this.fill,
+              fill: props.fill,
               height: size,
-              stroke: this.stroke,
-              'stroke-linecap': this.strokeLinecap,
-              'stroke-linejoin': this.strokeLinejoin,
-              'stroke-width': this.strokeWidth,
+              stroke: props.stroke,
+              'stroke-linecap': props.strokeLinecap,
+              'stroke-linejoin': props.strokeLinejoin,
+              'stroke-width': props.strokeWidth,
               width: size,
             },
 
