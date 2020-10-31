@@ -122,7 +122,7 @@
 
 <script>
 import pkg from '../package.json';
-import Readme from '../README.md';
+import Readme from '../src/README.md';
 
 export default {
   components: {
