@@ -1,23 +1,35 @@
-# Changelog
+# [1.1.0](https://github.com/fengyuanchen/vue-feather/compare/v1.0.1...v1.1.0) (2020-10-31)
 
-## 1.0.1 (Jun 6, 2020)
 
-- Rebuild with the latest `vue-loader` for better compatibility (#2).
+### Performance Improvements
 
-## 1.0.0 (Jan 26, 2019)
+* switch to functional component ([#4](https://github.com/fengyuanchen/vue-feather/issues/4)) ([38c34f1](https://github.com/fengyuanchen/vue-feather/commit/38c34f1316c561098d1b4bb26c9e455fc506991a))
 
-- Support to use as a Vue plugin: `Vue.use(VueFeather)`.
-- Support to use as a Vue component: `Vue.component(VueFeather.name, VueFeather)`.
-- Register the component automatically once loaded in the browser.
 
-## 0.2.1 (Aug 5, 2018)
 
-- Use Sass instead of PostCSS.
+## [1.0.1](https://github.com/fengyuanchen/vue-feather/compare/v1.0.0...v1.0.1) (2020-06-06)
 
-## 0.2.0 (Mar 25, 2018)
 
-- Rename element class name from `vue-feather` to `feather`.
 
-## 0.1.0 (Mar 20, 2018)
+# [1.0.0](https://github.com/fengyuanchen/vue-feather/compare/v0.2.1...v1.0.0) (2019-01-26)
 
-- Support 10 props: `animation`, `animation-speed`, `fill`, `size`, `stroke`, `stroke-linecap`, `stroke-linejoin`, `stroke-width`, `tag` and `type`.
+
+### Features
+
+* register as a Vue plugin ([c03c9ca](https://github.com/fengyuanchen/vue-feather/commit/c03c9ca6bb71a9b5c96debddfb46343b101a5e90))
+* register the component automatically once loaded ([f538b12](https://github.com/fengyuanchen/vue-feather/commit/f538b12e67670fa34868fb8e10676f054b16dd11))
+
+
+
+## [0.2.1](https://github.com/fengyuanchen/vue-feather/compare/v0.2.0...v0.2.1) (2018-08-05)
+
+
+
+# [0.2.0](https://github.com/fengyuanchen/vue-feather/compare/v0.1.0...v0.2.0) (2018-03-25)
+
+
+
+# 0.1.0 (2018-03-20)
+
+
+

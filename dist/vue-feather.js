@@ -1,20 +1,22 @@
 /*!
- * vue-feather v1.0.1
+ * vue-feather v1.1.0
  * https://fengyuanchen.github.io/vue-feather
  *
  * Copyright 2018-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2020-06-06T12:10:30.203Z
+ * Date: 2020-10-31T09:22:24.378Z
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('feather-icons')) :
   typeof define === 'function' && define.amd ? define(['feather-icons'], factory) :
-  (global = global || self, global.VueFeather = factory(global.feather));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.VueFeather = factory(global.feather));
 }(this, (function (feather) { 'use strict';
 
-  feather = feather && Object.prototype.hasOwnProperty.call(feather, 'default') ? feather['default'] : feather;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var feather__default = /*#__PURE__*/_interopDefaultLegacy(feather);
 
   function _defineProperty(obj, key, value) {
     if (key in obj) {
@@ -67,6 +69,7 @@
 
   var script = {
     name: 'Feather',
+    functional: true,
     props: {
       animation: {
         type: String,
@@ -108,7 +111,7 @@
         type: String,
         required: true,
         validator: function validator(type) {
-          if (!feather.icons[type]) {
+          if (!feather__default['default'].icons[type]) {
             throw new Error("\"".concat(type, "\" is not an available icon type."));
           }
 
@@ -116,15 +119,17 @@
         }
       }
     },
-    render: function render(createElement) {
+    render: function render(createElement, _ref) {
       var _class;
 
-      var animation = this.animation,
-          animationSpeed = this.animationSpeed,
-          size = this.size,
-          type = this.type;
-      var icon = feather.icons[type];
-      return createElement(this.tag, {
+      var listeners = _ref.listeners,
+          props = _ref.props;
+      var animation = props.animation,
+          animationSpeed = props.animationSpeed,
+          size = props.size,
+          type = props.type;
+      var icon = feather__default['default'].icons[type];
+      return createElement(props.tag, {
         attrs: {
           'data-name': type,
           'data-tags': icon ? icon.tags : '',
@@ -133,15 +138,15 @@
         class: (_class = {
           feather: true
         }, _defineProperty(_class, "feather--".concat(type), type), _defineProperty(_class, "feather--".concat(animation), animation), _defineProperty(_class, "feather--".concat(animationSpeed), animationSpeed), _class),
-        on: this.$listeners
+        on: listeners
       }, [icon ? createElement('svg', {
         attrs: _objectSpread2(_objectSpread2({}, icon.attrs), {}, {
-          fill: this.fill,
+          fill: props.fill,
           height: size,
-          stroke: this.stroke,
-          'stroke-linecap': this.strokeLinecap,
-          'stroke-linejoin': this.strokeLinejoin,
-          'stroke-width': this.strokeWidth,
+          stroke: props.stroke,
+          'stroke-linecap': props.strokeLinecap,
+          'stroke-linejoin': props.strokeLinejoin,
+          'stroke-width': props.strokeWidth,
           width: size
         }),
         class: [icon.attrs.class, 'feather__content'],
@@ -298,8 +303,8 @@
 
   var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
     if (!inject) return;
-    inject("data-v-07452373_0", {
-      source: "@keyframes feather--spin-data-v-07452373{from{transform:rotate(0)}to{transform:rotate(360deg)}}.feather[data-v-07452373]{display:inline-block;overflow:hidden}.feather--spin[data-v-07452373]{animation:feather--spin-data-v-07452373 2s linear infinite}.feather--pulse[data-v-07452373]{animation:feather--spin-data-v-07452373 2s infinite steps(8)}.feather--slow[data-v-07452373]{animation-duration:3s}.feather--fast[data-v-07452373]{animation-duration:1s}.feather__content[data-v-07452373]{display:block;height:inherit;width:inherit}",
+    inject("data-v-6e255ebb_0", {
+      source: "@keyframes feather--spin-data-v-6e255ebb{from{transform:rotate(0)}to{transform:rotate(360deg)}}.feather[data-v-6e255ebb]{display:inline-block;overflow:hidden}.feather--spin[data-v-6e255ebb]{animation:feather--spin-data-v-6e255ebb 2s linear infinite}.feather--pulse[data-v-6e255ebb]{animation:feather--spin-data-v-6e255ebb 2s infinite steps(8)}.feather--slow[data-v-6e255ebb]{animation-duration:3s}.feather--fast[data-v-6e255ebb]{animation-duration:1s}.feather__content[data-v-6e255ebb]{display:block;height:inherit;width:inherit}",
       map: undefined,
       media: undefined
     });
@@ -307,7 +312,7 @@
   /* scoped */
 
 
-  var __vue_scope_id__ = "data-v-07452373";
+  var __vue_scope_id__ = "data-v-6e255ebb";
   /* module identifier */
 
   var __vue_module_identifier__ = undefined;
