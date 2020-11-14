@@ -63,7 +63,7 @@ export default {
     },
   },
 
-  render(createElement, { listeners, props }) {
+  render(createElement, { data, props }) {
     const {
       animation,
       animationSpeed,
@@ -77,20 +77,22 @@ export default {
       props.tag,
 
       {
+        ...data,
+
         attrs: {
+          ...data.attrs,
           'data-name': type,
           'data-tags': icon ? icon.tags : '',
           'data-type': type,
         },
 
         class: {
+          ...data.class,
           feather: true,
           [`feather--${type}`]: type,
           [`feather--${animation}`]: animation,
           [`feather--${animationSpeed}`]: animationSpeed,
         },
-
-        on: listeners,
       },
 
       [
