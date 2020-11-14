@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/fengyuanchen/vue-feather/compare/v1.1.0...v1.1.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* inherit missing static attributes ([3e8ae72](https://github.com/fengyuanchen/vue-feather/commit/3e8ae72bb18fc2cc7b5c8ea5c6f815cf1b6afd26)), closes [#5](https://github.com/fengyuanchen/vue-feather/issues/5)
+
+
+
 # [1.1.0](https://github.com/fengyuanchen/vue-feather/compare/v1.0.1...v1.1.0) (2020-10-31)
 
 

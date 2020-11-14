@@ -1,11 +1,11 @@
 /*!
- * vue-feather v1.1.0
+ * vue-feather v1.1.1
  * https://fengyuanchen.github.io/vue-feather
  *
  * Copyright 2018-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2020-10-31T09:22:24.378Z
+ * Date: 2020-11-14T03:59:33.666Z
  */
 
 (function (global, factory) {
@@ -120,26 +120,25 @@
       }
     },
     render: function render(createElement, _ref) {
-      var _class;
+      var _objectSpread2$1;
 
-      var listeners = _ref.listeners,
+      var data = _ref.data,
           props = _ref.props;
       var animation = props.animation,
           animationSpeed = props.animationSpeed,
           size = props.size,
           type = props.type;
       var icon = feather__default['default'].icons[type];
-      return createElement(props.tag, {
-        attrs: {
+      return createElement(props.tag, _objectSpread2(_objectSpread2({}, data), {}, {
+        attrs: _objectSpread2(_objectSpread2({}, data.attrs), {}, {
           'data-name': type,
           'data-tags': icon ? icon.tags : '',
           'data-type': type
-        },
-        class: (_class = {
+        }),
+        class: _objectSpread2(_objectSpread2({}, data.class), {}, (_objectSpread2$1 = {
           feather: true
-        }, _defineProperty(_class, "feather--".concat(type), type), _defineProperty(_class, "feather--".concat(animation), animation), _defineProperty(_class, "feather--".concat(animationSpeed), animationSpeed), _class),
-        on: listeners
-      }, [icon ? createElement('svg', {
+        }, _defineProperty(_objectSpread2$1, "feather--".concat(type), type), _defineProperty(_objectSpread2$1, "feather--".concat(animation), animation), _defineProperty(_objectSpread2$1, "feather--".concat(animationSpeed), animationSpeed), _objectSpread2$1))
+      }), [icon ? createElement('svg', {
         attrs: _objectSpread2(_objectSpread2({}, icon.attrs), {}, {
           fill: props.fill,
           height: size,
@@ -303,8 +302,8 @@
 
   var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
     if (!inject) return;
-    inject("data-v-6e255ebb_0", {
-      source: "@keyframes feather--spin-data-v-6e255ebb{from{transform:rotate(0)}to{transform:rotate(360deg)}}.feather[data-v-6e255ebb]{display:inline-block;overflow:hidden}.feather--spin[data-v-6e255ebb]{animation:feather--spin-data-v-6e255ebb 2s linear infinite}.feather--pulse[data-v-6e255ebb]{animation:feather--spin-data-v-6e255ebb 2s infinite steps(8)}.feather--slow[data-v-6e255ebb]{animation-duration:3s}.feather--fast[data-v-6e255ebb]{animation-duration:1s}.feather__content[data-v-6e255ebb]{display:block;height:inherit;width:inherit}",
+    inject("data-v-4d521fc4_0", {
+      source: "@keyframes feather--spin-data-v-4d521fc4{from{transform:rotate(0)}to{transform:rotate(360deg)}}.feather[data-v-4d521fc4]{display:inline-block;overflow:hidden}.feather--spin[data-v-4d521fc4]{animation:feather--spin-data-v-4d521fc4 2s linear infinite}.feather--pulse[data-v-4d521fc4]{animation:feather--spin-data-v-4d521fc4 2s infinite steps(8)}.feather--slow[data-v-4d521fc4]{animation-duration:3s}.feather--fast[data-v-4d521fc4]{animation-duration:1s}.feather__content[data-v-4d521fc4]{display:block;height:inherit;width:inherit}",
       map: undefined,
       media: undefined
     });
@@ -312,7 +311,7 @@
   /* scoped */
 
 
-  var __vue_scope_id__ = "data-v-6e255ebb";
+  var __vue_scope_id__ = "data-v-4d521fc4";
   /* module identifier */
 
   var __vue_module_identifier__ = undefined;
