@@ -158,4 +158,29 @@ describe('<feather>', () => {
       });
     });
   });
+
+  describe('misc', () => {
+    it('should inherit the static attributes', () => {
+      const vm = new Vue({
+        template: '<feather type="feather" class="feather-icon-feather" style="color: blue;"></feather>',
+      }).$mount();
+
+      expect(vm.$el.classList.contains('feather-icon-feather')).to.be.true;
+      expect(vm.$el.style.color).to.equal('blue');
+    });
+
+    it('should trigger the bound event handler', (done) => {
+      const vm = new Vue({
+        methods: {
+          handleClick(event) {
+            expect(event.type).to.equal('click');
+            done();
+          },
+        },
+        template: '<feather @click="handleClick" type="feather"></feather>',
+      }).$mount();
+
+      vm.$el.click();
+    });
+  });
 });
