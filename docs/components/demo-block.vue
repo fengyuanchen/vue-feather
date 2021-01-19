@@ -4,6 +4,14 @@
   </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'DemoBlock',
+});
+</script>
+
 <style lang="scss">
   .demo {
     border: 1px solid #eee;

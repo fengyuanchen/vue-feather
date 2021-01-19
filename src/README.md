@@ -11,7 +11,7 @@
   </p>
   <ul class="icons">
     <li v-for="icon in icons" :key="icon">
-      <feather :type="icon"></feather>
+      <vue-feather :type="icon"></vue-feather>
       <span>{{ icon }}</span>
     </li>
   </ul>
@@ -87,17 +87,15 @@
 
 ```html
 <template>
-  <div>
-    <feather type="star" stroke="red"></feather>
-    <feather type="star" stroke="green"></feather>
-    <feather type="star" stroke="blue"></feather>
-    <feather type="star" stroke="none" fill="red"></feather>
-    <feather type="star" stroke="none" fill="green"></feather>
-    <feather type="star" stroke="none" fill="blue"></feather>
-    <feather type="star" stroke="red" fill="red"></feather>
-    <feather type="star" stroke="green" fill="green"></feather>
-    <feather type="star" stroke="blue" fill="blue"></feather>
-  </div>
+  <vue-feather type="star" stroke="red"></vue-feather>
+  <vue-feather type="star" stroke="green"></vue-feather>
+  <vue-feather type="star" stroke="blue"></vue-feather>
+  <vue-feather type="star" stroke="none" fill="red"></vue-feather>
+  <vue-feather type="star" stroke="none" fill="green"></vue-feather>
+  <vue-feather type="star" stroke="none" fill="blue"></vue-feather>
+  <vue-feather type="star" stroke="red" fill="red"></vue-feather>
+  <vue-feather type="star" stroke="green" fill="green"></vue-feather>
+  <vue-feather type="star" stroke="blue" fill="blue"></vue-feather>
 </template>
 ```
 
@@ -105,13 +103,11 @@
 
 ```html
 <template>
-  <div>
-    <feather type="star"></feather>
-    <feather type="star" size="36"></feather>
-    <feather type="star" size="48"></feather>
-    <feather type="star" size="36px"></feather>
-    <feather type="star" size="1.5rem"></feather>
-  </div>
+  <vue-feather type="star"></vue-feather>
+  <vue-feather type="star" size="36"></vue-feather>
+  <vue-feather type="star" size="48"></vue-feather>
+  <vue-feather type="star" size="36px"></vue-feather>
+  <vue-feather type="star" size="1.5rem"></vue-feather>
 </template>
 ```
 
@@ -119,11 +115,9 @@
 
 ```html
 <template>
-  <div>
-    <feather type="star" stroke-width="1"></feather>
-    <feather type="star"></feather>
-    <feather type="star" stroke-width="3"></feather>
-  </div>
+  <vue-feather type="star" stroke-width="1"></vue-feather>
+  <vue-feather type="star"></vue-feather>
+  <vue-feather type="star" stroke-width="3"></vue-feather>
 </template>
 ```
 
@@ -131,32 +125,30 @@
 
 ```html
 <template>
-  <div>
-    <p>
-      <span>Slow:</span>
-      <feather type="loader" animation="spin" animation-speed="slow"></feather>
-      <feather type="settings" animation="spin" animation-speed="slow"></feather>
-      <feather type="sun" animation="spin" animation-speed="slow"></feather>
-      <feather type="rotate-cw" animation="spin" animation-speed="slow"></feather>
-      <feather type="rotate-cw" animation="pulse" animation-speed="slow"></feather>
-    </p>
-    <p>
-      <span>Normal:</span>
-      <feather type="loader" animation="spin"></feather>
-      <feather type="settings" animation="spin"></feather>
-      <feather type="sun" animation="spin"></feather>
-      <feather type="rotate-cw" animation="spin"></feather>
-      <feather type="rotate-cw" animation="pulse"></feather>
-    </p>
-    <p>
-      <span>Fast:</span>
-      <feather type="loader" animation="spin" animation-speed="fast"></feather>
-      <feather type="settings" animation="spin" animation-speed="fast"></feather>
-      <feather type="sun" animation="spin" animation-speed="fast"></feather>
-      <feather type="rotate-cw" animation="spin" animation-speed="fast"></feather>
-      <feather type="rotate-cw" animation="pulse" animation-speed="fast"></feather>
-    </p>
-  </div>
+  <p>
+    <span>Slow:</span>
+    <vue-feather type="loader" animation="spin" animation-speed="slow"></vue-feather>
+    <vue-feather type="settings" animation="spin" animation-speed="slow"></vue-feather>
+    <vue-feather type="sun" animation="spin" animation-speed="slow"></vue-feather>
+    <vue-feather type="rotate-cw" animation="spin" animation-speed="slow"></vue-feather>
+    <vue-feather type="rotate-cw" animation="pulse" animation-speed="slow"></vue-feather>
+  </p>
+  <p>
+    <span>Normal:</span>
+    <vue-feather type="loader" animation="spin"></vue-feather>
+    <vue-feather type="settings" animation="spin"></vue-feather>
+    <vue-feather type="sun" animation="spin"></vue-feather>
+    <vue-feather type="rotate-cw" animation="spin"></vue-feather>
+    <vue-feather type="rotate-cw" animation="pulse"></vue-feather>
+  </p>
+  <p>
+    <span>Fast:</span>
+    <vue-feather type="loader" animation="spin" animation-speed="fast"></vue-feather>
+    <vue-feather type="settings" animation="spin" animation-speed="fast"></vue-feather>
+    <vue-feather type="sun" animation="spin" animation-speed="fast"></vue-feather>
+    <vue-feather type="rotate-cw" animation="spin" animation-speed="fast"></vue-feather>
+    <vue-feather type="rotate-cw" animation="pulse" animation-speed="fast"></vue-feather>
+  </p>
 </template>
 
 <style scoped>

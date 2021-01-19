@@ -1,21 +1,20 @@
 # vue-feather
 
-[![Build Status](https://img.shields.io/travis/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
+[![Build Status](https://img.shields.io/github/workflow/status/fengyuanchen/vue-feather/ci/main.svg)](https://github.com/fengyuanchen/vue-feather/actions) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-feather.svg)](https://codecov.io/gh/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
 
-> [Feather](https://feathericons.com/) component for [Vue.js](https://vuejs.org/).
+> [Feather](https://feathericons.com/) component for Vue 3.
 
 - [Docs](src/README.md)
 - [Demo](https://fengyuanchen.github.io/vue-feather)
-- [Leia esta página em português](https://github.com/fengyuanchen/vue-feather/blob/master/README-pt.md)
 
-## Main
+## Main files
 
 ```text
 dist/
-├── vue-feather.js        (UMD)
-├── vue-feather.min.js    (UMD, compressed)
-├── vue-feather.common.js (CommonJS, default)
-└── vue-feather.esm.js    (ES Module)
+├── vue-feather.js         (UMD, default)
+├── vue-feather.min.js     (UMD, compressed)
+├── vue-feather.esm.js     (ECMAScript Module)
+└── vue-feather.esm.min.js (ECMAScript Module, compressed)
 ```
 
 ## Getting started
@@ -31,7 +30,7 @@ In browser:
 ```html
 <script src="/path/to/vue.js"></script><!-- Vue.js is required -->
 <script src="/path/to/feather.js"></script><!-- Feather is required -->
-<script src="/path/to/vue-feather.js"></script><!-- Register automatically once loaded -->
+<script src="/path/to/vue-feather.js"></script>
 ```
 
 ### Usage
@@ -40,25 +39,22 @@ In browser:
 import Vue from 'vue';
 import VueFeather from 'vue-feather';
 
-Vue.use(VueFeather);
-// Or
-Vue.component(VueFeather.name, VueFeather);
-// Or
-Vue.component('vue-feather', VueFeather);
+const app = Vue.createApp({});
+
+app.component(VueFeather.name, VueFeather);
 ```
 
 ```html
-<feather type="feather"></feather>
+<vue-feather type="feather"></vue-feather>
 ```
 
 ## Browser support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Opera (latest)
-- Edge (latest)
-- Internet Explorer 9+
+Same as Vue 3.
+
+## Versioning
+
+Maintained under the [Semantic Versioning guidelines](https://semver.org/).
 
 ## License
 
