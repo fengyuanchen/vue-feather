@@ -48,7 +48,7 @@
             </a>
             <a
               class="nav-link"
-              :href="author.url"
+              href="https://chenfengyuan.com/"
               title="About the author"
             >
               About
@@ -98,19 +98,19 @@
           </a>
           <a
             class="nav-link"
-            href="https://github.com/fengyuanchen/vue-feather/blob/master/CHANGELOG.md"
+            href="https://github.com/fengyuanchen/vue-feather/blob/main/CHANGELOG.md"
           >
             Changelog
           </a>
           <a
             class="nav-link"
-            href="https://github.com/fengyuanchen/vue-feather/blob/master/LICENSE"
+            href="https://github.com/fengyuanchen/vue-feather/blob/main/LICENSE"
           >
             License
           </a>
           <a
             class="nav-link"
-            :href="author.url"
+            href="https://chenfengyuan.com/"
           >
             About
           </a>
