@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/github/workflow/status/fengyuanchen/vue-feather/ci/main.svg)](https://github.com/fengyuanchen/vue-feather/actions) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-feather.svg)](https://codecov.io/gh/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
 
-> [Feather](https://feathericons.com/) component for Vue 3.
+> [Feather](https://feathericons.com/) icons component for Vue 3.
 
 - [Docs](src/README.md)
 - [Demo](https://fengyuanchen.github.io/vue-feather)

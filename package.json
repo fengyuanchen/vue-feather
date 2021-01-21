@@ -1,7 +1,7 @@
 {
   "name": "vue-feather",
   "version": "2.0.0-alpha",
-  "description": "Feather component for Vue 3.",
+  "description": "Feather icons component for Vue 3.",
   "main": "dist/vue-feather.js",
   "module": "dist/vue-feather.esm.js",
   "types": "types/index.d.ts",

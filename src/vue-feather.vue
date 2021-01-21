@@ -57,9 +57,11 @@ const VueFeather: FunctionalComponent<VueFeatherProps> = (props, context) => {
           class: [icon.attrs.class, 'vue-feather__content'],
         },
 
-        [h({
-          template: icon.contents,
-        })],
+        [
+          h({
+            template: icon.contents,
+          }),
+        ],
       ) : '',
     ],
   );

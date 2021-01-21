@@ -178,13 +178,13 @@
 
 | Name | Type | Default | Options | Description |
 | --- | --- | --- | --- | --- |
-| animation | `String` | - | spin, pulse | The animation type of the icon. |
-| animation-speed | `String` | - | slow, fast | The animation speed of the icon. |
-| fill | `String` | `'none'` | - | The fill color of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)). |
-| size | `Number` \| `String` | `24` | - | The size of the icon. Set both width and height of the icon. |
-| stroke | `String` | `'currentColor'` | - | The stroke color of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke)). |
-| stroke-linecap | `String` | `'round'` | butt, round, square | Specifies the shape to be used at the end of open subpaths when they are stroked ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap)). |
-| stroke-linejoin | `String` | `'round'` | miter, round, bevel | Specifies the shape to be used at the corners of paths or basic shapes when they are stroked ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin)). |
-| stroke-width | `Number` \| `String` | `2` | - | The stroke width of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width)). |
-| tag | `String` | `'i'` | - | The tag of the icon. |
-| type | `String` | - | All [Feather](https://feathericons.com/)'s icons. | The type of the icon. |
+| animation | `string` | - | spin, pulse | The animation type of the icon. |
+| animation-speed | `string` | - | slow, fast | The animation speed of the icon. |
+| fill | `string` | `"none"` | - | The fill color of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)). |
+| size | `number \| string` | `24` | - | The size of the icon. Set both width and height of the icon. |
+| stroke | `string` | `"currentColor"` | - | The stroke color of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke)). |
+| stroke-linecap | `string` | `"round"` | butt, round, square | Specifies the shape to be used at the end of open subpaths when they are stroked ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap)). |
+| stroke-linejoin | `string` | `"round"` | miter, round, bevel | Specifies the shape to be used at the corners of paths or basic shapes when they are stroked ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin)). |
+| stroke-width | `number \| string` | `2` | - | The stroke width of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width)). |
+| tag | `string` | `"i"` | - | The tag of the icon. |
+| type | `string` | - | All [Feather](https://feathericons.com/)'s icons. | The type of the icon. |
