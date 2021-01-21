@@ -1,3 +1,15 @@
+# [2.0.0-alpha](https://github.com/fengyuanchen/vue-feather/compare/v1.1.1...v2.0.0-alpha) (2021-01-21)
+
+
+* refactor!: upgrade to Vue 3 ([669dae8](https://github.com/fengyuanchen/vue-feather/commit/669dae8e5c9d897618280b4de1c78e767c44d020))
+
+
+### BREAKING CHANGES
+
+* drop support for Vue 2.
+
+
+
 ## [1.1.1](https://github.com/fengyuanchen/vue-feather/compare/v1.1.0...v1.1.1) (2020-11-14)
 
 
