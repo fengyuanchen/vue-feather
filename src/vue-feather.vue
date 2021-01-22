@@ -1,173 +1,160 @@
 <script lang="ts">
-import { h, FunctionalComponent } from 'vue';
-import feather from 'feather-icons';
+import { defineComponent, h } from 'vue';
+import * as feather from 'feather-icons';
 
-interface VueFeatherProps {
-  animation?: string;
-  animationSpeed?: string;
-  fill?: string;
-  size?: number | string;
-  stroke?: string;
-  strokeLinecap?: string;
-  strokeLinejoin?: string;
-  strokeWidth?: number | string;
-  tag?: string;
-  type: string;
-}
+export default defineComponent({
+  name: 'VueFeather',
+  props: {
+    animation: {
+      type: String,
+      default: undefined,
+    },
 
-const VueFeather: FunctionalComponent<VueFeatherProps> = (props, context) => {
-  const {
-    animation,
-    animationSpeed,
-    size,
-    type,
-  } = props;
+    animationSpeed: {
+      type: String,
+      default: undefined,
+    },
 
-  const icon = feather.icons[type];
+    fill: {
+      type: String,
+      default: 'none',
+    },
 
-  return h(
-    props.tag as string,
+    size: {
+      type: [Number, String],
+      default: 24,
+    },
 
-    {
-      ...context.attrs,
-      'data-name': type,
-      'data-tags': icon ? icon.tags : '',
-      'data-type': type,
-      class: {
-        'vue-feather': true,
-        [`vue-feather--${type}`]: type,
-        [`vue-feather--${animation}`]: animation,
-        [`vue-feather--${animationSpeed}`]: animationSpeed,
+    stroke: {
+      type: String,
+      default: 'currentColor',
+    },
+
+    strokeLinecap: {
+      type: String,
+      default: 'round',
+    },
+
+    strokeLinejoin: {
+      type: String,
+      default: 'round',
+    },
+
+    strokeWidth: {
+      type: [Number, String],
+      default: 2,
+    },
+
+    tag: {
+      type: String,
+      default: 'i',
+    },
+
+    type: {
+      type: String,
+      required: true,
+      validator(type: string) {
+        if (!feather) {
+          throw new Error('The Feather icons is required.');
+        }
+
+        if (!feather.icons[type]) {
+          throw new Error(`"${type}" is not an available icon type.`);
+        }
+
+        return true;
       },
     },
+  },
+  render() {
+    const {
+      animation,
+      animationSpeed,
+      size,
+      type,
+    } = this;
 
-    [
-      icon ? h(
-        'svg',
+    const icon = feather.icons[type];
 
-        {
-          ...icon.attrs,
-          fill: props.fill,
-          height: size,
-          stroke: props.stroke,
-          'stroke-linecap': props.strokeLinecap,
-          'stroke-linejoin': props.strokeLinejoin,
-          'stroke-width': props.strokeWidth,
-          width: size,
-          class: [icon.attrs.class, 'vue-feather__content'],
+    return h(
+      this.tag as string,
+
+      {
+        ...this.$attrs,
+        'data-name': type,
+        'data-tags': icon.tags,
+        'data-type': type,
+        class: {
+          'vue-feather': true,
+          [`vue-feather--${type}`]: type,
+          [`vue-feather--${animation}`]: animation,
+          [`vue-feather--${animationSpeed}`]: animationSpeed,
         },
+      },
 
-        [
-          h({
-            template: icon.contents,
-          }),
-        ],
-      ) : '',
-    ],
-  );
-};
+      [
+        h(
+          'svg',
 
-VueFeather.props = {
-  animation: {
-    type: String,
-    default: undefined,
+          {
+            ...icon.attrs,
+            fill: this.fill,
+            height: size,
+            stroke: this.stroke,
+            'stroke-linecap': this.strokeLinecap,
+            'stroke-linejoin': this.strokeLinejoin,
+            'stroke-width': this.strokeWidth,
+            width: size,
+            class: [icon.attrs.class, 'vue-feather__content'],
+          },
+
+          [
+            h({
+              template: icon.contents,
+            }),
+          ],
+        ),
+      ],
+    );
   },
-
-  animationSpeed: {
-    type: String,
-    default: undefined,
-  },
-
-  fill: {
-    type: String,
-    default: 'none',
-  },
-
-  size: {
-    type: [Number, String],
-    default: 24,
-  },
-
-  stroke: {
-    type: String,
-    default: 'currentColor',
-  },
-
-  strokeLinecap: {
-    type: String,
-    default: 'round',
-  },
-
-  strokeLinejoin: {
-    type: String,
-    default: 'round',
-  },
-
-  strokeWidth: {
-    type: [Number, String],
-    default: 2,
-  },
-
-  tag: {
-    type: String,
-    default: 'i',
-  },
-
-  type: {
-    type: String,
-    required: true,
-    validator(type: string) {
-      if (!feather) {
-        throw new Error('The Feather icons is required.');
-      }
-
-      if (!feather.icons[type]) {
-        throw new Error(`"${type}" is not an available icon type.`);
-      }
-
-      return true;
-    },
-  },
-};
-
-export default VueFeather;
+});
 </script>
 
 <style lang="scss">
-  @keyframes vue-feather--spin {
-    from {
-      transform: rotate(0);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes vue-feather--spin {
+  from {
+    transform: rotate(0);
   }
 
-  .vue-feather {
-    display: inline-block;
-    overflow: hidden;
-
-    &--spin {
-      animation: vue-feather--spin 2s linear infinite;
-    }
-
-    &--pulse {
-      animation: vue-feather--spin 2s infinite steps(8);
-    }
-
-    &--slow {
-      animation-duration: 3s;
-    }
-
-    &--fast {
-      animation-duration: 1s;
-    }
-
-    &__content {
-      display: block;
-      height: inherit;
-      width: inherit;
-    }
+  to {
+    transform: rotate(360deg);
   }
+}
+
+.vue-feather {
+  display: inline-block;
+  overflow: hidden;
+
+  &--spin {
+    animation: vue-feather--spin 2s linear infinite;
+  }
+
+  &--pulse {
+    animation: vue-feather--spin 2s infinite steps(8);
+  }
+
+  &--slow {
+    animation-duration: 3s;
+  }
+
+  &--fast {
+    animation-duration: 1s;
+  }
+
+  &__content {
+    display: block;
+    height: inherit;
+    width: inherit;
+  }
+}
 </style>

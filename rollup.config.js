@@ -25,7 +25,7 @@ export default ['umd', 'esm'].map((format) => ({
       file: pkg.main,
       globals: {
         vue: 'Vue',
-        feather: 'feather',
+        'feather-icons': 'feather',
       },
     };
 

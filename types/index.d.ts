@@ -1,20 +1,7 @@
 declare module 'vue-feather' {
-  import { FunctionalComponent } from 'vue';
+  import { Component } from 'vue';
 
-  interface VueFeatherProps {
-    animation?: string;
-    animationSpeed?: string;
-    fill?: string;
-    size?: number | string;
-    stroke?: string;
-    strokeLinecap?: string;
-    strokeLinejoin?: string;
-    strokeWidth?: number | string;
-    tag?: string;
-    type: string;
-  }
-
-  const VueFeather: FunctionalComponent<VueFeatherProps>;
+  const VueFeather: Component;
 
   export default VueFeather;
 }

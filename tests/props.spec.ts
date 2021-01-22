@@ -1,4 +1,4 @@
-import feather from 'feather-icons';
+import * as feather from 'feather-icons';
 import { mount } from '@vue/test-utils';
 import VueFeather from '../src';
 
@@ -149,7 +149,7 @@ describe('props', () => {
     });
 
     expect(wrapper.props('strokeWidth')).toBe(3);
-    expect(wrapper.find('svg').attributes('stroke-width')).toBe(3);
+    expect(wrapper.find('svg').attributes('stroke-width')).toBe('3');
   });
 
   describe('tag', () => {
@@ -178,12 +178,6 @@ describe('props', () => {
   });
 
   describe('type', () => {
-    it('required', () => {
-      expect(() => {
-        mount(VueFeather);
-      }).toThrowError();
-    });
-
     it('invalid', () => {
       expect(() => {
         mount(VueFeather, {

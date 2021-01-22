@@ -65,7 +65,7 @@ module.exports = (env) => ({
   ],
   externals: env.production ? {
     vue: 'Vue',
-    feather: 'feather',
+    'feather-icons': 'feather',
   } : {},
   resolve: {
     alias: {
