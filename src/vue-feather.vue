@@ -52,7 +52,7 @@ export default defineComponent({
 
     type: {
       type: String,
-      required: true,
+      default: 'feather',
       validator(type: string) {
         if (!feather) {
           throw new Error('The Feather icons is required.');

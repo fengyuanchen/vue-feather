@@ -5,11 +5,7 @@ import VueFeather from '../src';
 describe('props', () => {
   describe('animation', () => {
     it('default', () => {
-      const wrapper = mount(VueFeather, {
-        props: {
-          type: 'feather',
-        },
-      });
+      const wrapper = mount(VueFeather);
 
       expect(wrapper.props('animation')).toBeUndefined();
       expect(wrapper.classes()).not.toContain('vue-feather--spin');
@@ -20,7 +16,6 @@ describe('props', () => {
       const wrapper = mount(VueFeather, {
         props: {
           animation: 'spin',
-          type: 'feather',
         },
       });
 
@@ -32,7 +27,6 @@ describe('props', () => {
       const wrapper = mount(VueFeather, {
         props: {
           animation: 'pulse',
-          type: 'feather',
         },
       });
 
@@ -43,11 +37,7 @@ describe('props', () => {
 
   describe('animation-speed', () => {
     it('default', () => {
-      const wrapper = mount(VueFeather, {
-        props: {
-          type: 'feather',
-        },
-      });
+      const wrapper = mount(VueFeather);
 
       expect(wrapper.props('animationSpeed')).toBeUndefined();
       expect(wrapper.classes()).not.toContain('vue-feather--slow');
@@ -58,7 +48,6 @@ describe('props', () => {
       const wrapper = mount(VueFeather, {
         props: {
           animationSpeed: 'slow',
-          type: 'feather',
         },
       });
 
@@ -70,7 +59,6 @@ describe('props', () => {
       const wrapper = mount(VueFeather, {
         props: {
           animationSpeed: 'fast',
-          type: 'feather',
         },
       });
 
@@ -83,7 +71,6 @@ describe('props', () => {
     const wrapper = mount(VueFeather, {
       props: {
         fill: 'red',
-        type: 'feather',
       },
     });
 
@@ -95,7 +82,6 @@ describe('props', () => {
     const wrapper = mount(VueFeather, {
       props: {
         size: '2rem',
-        type: 'feather',
       },
     });
 
@@ -108,7 +94,6 @@ describe('props', () => {
     const wrapper = mount(VueFeather, {
       props: {
         stroke: 'red',
-        type: 'feather',
       },
     });
 
@@ -120,7 +105,6 @@ describe('props', () => {
     const wrapper = mount(VueFeather, {
       props: {
         strokeLinecap: 'butt',
-        type: 'feather',
       },
     });
 
@@ -132,7 +116,6 @@ describe('props', () => {
     const wrapper = mount(VueFeather, {
       props: {
         strokeLinejoin: 'miter',
-        type: 'feather',
       },
     });
 
@@ -144,7 +127,6 @@ describe('props', () => {
     const wrapper = mount(VueFeather, {
       props: {
         strokeWidth: 3,
-        type: 'feather',
       },
     });
 
@@ -154,11 +136,7 @@ describe('props', () => {
 
   describe('tag', () => {
     it('default', () => {
-      const wrapper = mount(VueFeather, {
-        props: {
-          type: 'feather',
-        },
-      });
+      const wrapper = mount(VueFeather);
 
       expect(wrapper.props('tag')).toBe('i');
       expect(wrapper.vm.$el.tagName.toLowerCase()).toBe('i');
@@ -168,7 +146,6 @@ describe('props', () => {
       const wrapper = mount(VueFeather, {
         props: {
           tag: 'span',
-          type: 'feather',
         },
       });
 
@@ -178,6 +155,14 @@ describe('props', () => {
   });
 
   describe('type', () => {
+    it('default', () => {
+      const wrapper = mount(VueFeather);
+
+      expect(wrapper.props('type')).toBe('feather');
+      expect(wrapper.classes()).toContain('vue-feather--feather');
+      expect(wrapper.vm.$el.querySelector('svg').innerHTML).toContain(feather.icons.feather.contents);
+    });
+
     it('invalid', () => {
       expect(() => {
         mount(VueFeather, {
@@ -186,18 +171,6 @@ describe('props', () => {
           },
         });
       }).toThrowError();
-    });
-
-    it('feather', () => {
-      const wrapper = mount(VueFeather, {
-        props: {
-          type: 'feather',
-        },
-      });
-
-      expect(wrapper.props('type')).toBe('feather');
-      expect(wrapper.classes()).toContain('vue-feather--feather');
-      expect(wrapper.vm.$el.querySelector('svg').innerHTML).toContain(feather.icons.feather.contents);
     });
   });
 });
