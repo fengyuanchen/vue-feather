@@ -1,3 +1,12 @@
+# [2.0.0-beta](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-alpha...v2.0.0-beta) (2021-01-23)
+
+
+### Features
+
+* add a default value to the `type` prop ([8d68c63](https://github.com/fengyuanchen/vue-feather/commit/8d68c6361aee33ced6acce8588b13343be611bd2))
+
+
+
 # [2.0.0-alpha](https://github.com/fengyuanchen/vue-feather/compare/v1.1.1...v2.0.0-alpha) (2021-01-21)
 
 
