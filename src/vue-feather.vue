@@ -106,13 +106,8 @@ export default defineComponent({
             'stroke-width': this.strokeWidth,
             width: size,
             class: [icon.attrs.class, 'vue-feather__content'],
+            innerHTML: icon.contents,
           },
-
-          [
-            h({
-              template: icon.contents,
-            }),
-          ],
         ),
       ],
     );
