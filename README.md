@@ -36,10 +36,10 @@ In browser:
 ### Usage
 
 ```js
-import Vue from 'vue';
+import { createApp } from 'vue';
 import VueFeather from 'vue-feather';
 
-const app = Vue.createApp({});
+const app = createApp({});
 
 app.component(VueFeather.name, VueFeather);
 ```
