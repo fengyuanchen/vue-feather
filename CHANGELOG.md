@@ -1,3 +1,12 @@
+# [2.0.0-beta.1](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-beta...v2.0.0-beta.1) (2021-04-24)
+
+
+### Bug Fixes
+
+* use the `innerHTML` property to render icon content ([#9](https://github.com/fengyuanchen/vue-feather/issues/9)) ([a08bef5](https://github.com/fengyuanchen/vue-feather/commit/a08bef5bc3b9b6e93a0773754429af5c556c3ea1))
+
+
+
 # [2.0.0-beta](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-alpha...v2.0.0-beta) (2021-01-23)
 
 
