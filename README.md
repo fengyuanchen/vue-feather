@@ -1,6 +1,6 @@
 # vue-feather
 
-[![Build Status](https://img.shields.io/github/workflow/status/fengyuanchen/vue-feather/ci/main.svg)](https://github.com/fengyuanchen/vue-feather/actions) [![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-feather.svg)](https://codecov.io/gh/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather/next.svg)](https://www.npmjs.com/package/vue-feather) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/vue-feather.svg)](https://unpkg.com/vue-feather/dist/vue-feather.js)
+[![Coverage Status](https://img.shields.io/codecov/c/github/fengyuanchen/vue-feather.svg)](https://codecov.io/gh/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather/next.svg)](https://www.npmjs.com/package/vue-feather) [![Gzip Size](https://img.shields.io/bundlephobia/minzip/vue-feather.svg)](https://unpkg.com/vue-feather/dist/vue-feather.js)
 
 > [Feather](https://feathericons.com/) icons component for Vue 3.
 
