@@ -1,3 +1,7 @@
+# [2.0.0-rc](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-beta.1...v2.0.0-rc) (2021-06-12)
+
+
+
 # [2.0.0-beta.1](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-beta...v2.0.0-beta.1) (2021-04-24)
 
 
