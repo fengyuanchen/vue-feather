@@ -1,3 +1,12 @@
+# [2.0.0-rc.1](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-rc...v2.0.0-rc.1) (2021-10-23)
+
+
+### Bug Fixes
+
+* size values with `rem` units are invalid in Safari ([65cdf4a](https://github.com/fengyuanchen/vue-feather/commit/65cdf4a0221c0b3b13656a01235b41133a8f81f9)), closes [#13](https://github.com/fengyuanchen/vue-feather/issues/13)
+
+
+
 # [2.0.0-rc](https://github.com/fengyuanchen/vue-feather/compare/v2.0.0-beta.1...v2.0.0-rc) (2021-06-12)
 
 

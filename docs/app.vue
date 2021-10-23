@@ -217,7 +217,7 @@ export default defineComponent({
 
   &::before {
     border-top: 1px solid #eee;
-    content: '';
+    content: "";
     display: block;
     height: 0;
     left: 0;
@@ -228,7 +228,7 @@ export default defineComponent({
 
   &::after {
     background-color: #fff;
-    content: '♥';
+    content: "♥";
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     position: relative;

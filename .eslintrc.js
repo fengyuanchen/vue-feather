@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'import',
     'vue',
   ],
   rules: {
@@ -30,6 +31,9 @@ module.exports = {
       files: ['tests/**/*.ts'],
       env: {
         jest: true,
+      },
+      rules: {
+        '@typescript-eslint/no-unused-expressions': 'off',
       },
     },
   ],
