@@ -4,6 +4,7 @@ import * as feather from 'feather-icons';
 
 export default defineComponent({
   name: 'VueFeather',
+
   props: {
     animation: {
       type: String,
@@ -66,10 +67,18 @@ export default defineComponent({
       },
     },
   },
+
+  computed: {
+    isRemSize(): boolean {
+      return typeof this.size === 'string' && this.size.endsWith('rem');
+    },
+  },
+
   render() {
     const {
       animation,
       animationSpeed,
+      isRemSize,
       size,
       type,
     } = this;
@@ -84,27 +93,34 @@ export default defineComponent({
         'data-name': type,
         'data-tags': icon.tags,
         'data-type': type,
+
         class: {
           'vue-feather': true,
           [`vue-feather--${type}`]: type,
           [`vue-feather--${animation}`]: animation,
           [`vue-feather--${animationSpeed}`]: animationSpeed,
         },
+
+        style: isRemSize ? {
+          height: size,
+          width: size,
+        } : undefined,
       },
 
       [
         h(
           'svg',
 
+          // XXX: The `width` and `height` attributes do not support the `rem` unit in Safari (#13).
           {
             ...icon.attrs,
             fill: this.fill,
-            height: size,
+            height: isRemSize ? undefined : size,
             stroke: this.stroke,
             'stroke-linecap': this.strokeLinecap,
             'stroke-linejoin': this.strokeLinejoin,
             'stroke-width': this.strokeWidth,
-            width: size,
+            width: isRemSize ? undefined : size,
             class: [icon.attrs.class, 'vue-feather__content'],
             innerHTML: icon.contents,
           },

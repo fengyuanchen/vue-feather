@@ -78,16 +78,43 @@ describe('props', () => {
     expect(wrapper.find('svg').attributes('fill')).toBe('red');
   });
 
-  it('size', () => {
-    const wrapper = mount(VueFeather, {
-      props: {
-        size: '2rem',
-      },
+  describe('size', () => {
+    it('number', () => {
+      const wrapper = mount(VueFeather, {
+        props: {
+          size: 32,
+        },
+      });
+
+      expect(wrapper.props('size')).toBe(32);
+      expect(wrapper.find('svg').attributes('width')).toBe('32');
+      expect(wrapper.find('svg').attributes('height')).toBe('32');
     });
 
-    expect(wrapper.props('size')).toBe('2rem');
-    expect(wrapper.find('svg').attributes('width')).toBe('2rem');
-    expect(wrapper.find('svg').attributes('height')).toBe('2rem');
+    it('string', () => {
+      const wrapper = mount(VueFeather, {
+        props: {
+          size: '2em',
+        },
+      });
+
+      expect(wrapper.props('size')).toBe('2em');
+      expect(wrapper.find('svg').attributes('width')).toBe('2em');
+      expect(wrapper.find('svg').attributes('height')).toBe('2em');
+    });
+
+    it('string:rem', () => {
+      const wrapper = mount(VueFeather, {
+        props: {
+          size: '2rem',
+        },
+      });
+
+      expect(wrapper.props('size')).toBe('2rem');
+      expect(wrapper.attributes('style')).toContain('2rem');
+      expect(wrapper.find('svg').attributes('width')).toBeUndefined;
+      expect(wrapper.find('svg').attributes('height')).toBeUndefined;
+    });
   });
 
   it('stroke', () => {
