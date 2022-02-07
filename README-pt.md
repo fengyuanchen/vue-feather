@@ -1,8 +1,6 @@
 # vue-feather
 
-[![Build Status](https://img.shields.io/travis/fengyuanchen/vue-feather.svg)](https://travis-ci.org/fengyuanchen/vue-feather) [![Downloads](https://img.shields.io/npm/dm/vue-feather.svg)](https://www.npmjs.com/package/vue-feather) [![Version](https://img.shields.io/npm/v/vue-feather.svg)](https://www.npmjs.com/package/vue-feather)
-
-> [Feather Icon](https://feathericons.com/) em componentes para [Vue.js](https://vuejs.org/).
+> [Feather Icon](https://feathericons.com/) em componentes para [Vue 2](https://v2.vuejs.org/).
 
 - [Documentação](src/README.md)
 - [Demonstração](https://fengyuanchen.github.io/vue-feather)
@@ -22,7 +20,7 @@ dist/
 ### Instalação
 
 ```shell
-npm install vue feather-icons vue-feather
+npm install vue@2 feather-icons@4 vue-feather@1
 ```
 
 No navegador:
