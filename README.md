@@ -7,7 +7,7 @@
 - [Docs](src/README.md)
 - [Demo](https://fengyuanchen.github.io/vue-feather)
 
-## Main files
+## Main npm package files
 
 ```text
 dist/
