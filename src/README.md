@@ -99,6 +99,14 @@ export default {
 </template>
 ```
 
+## Icon Class
+
+```html
+<template>
+  <vue-feather type="star" icon-class="custom-class"></vue-feather>
+</template>
+```
+
 ## Sizes
 
 ```html
@@ -181,6 +189,7 @@ p > i {
 | animation | `string` | - | spin, pulse | The animation type of the icon. |
 | animation-speed | `string` | - | slow, fast | The animation speed of the icon. |
 | fill | `string` | `"none"` | - | The fill color of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)). |
+| icon-class | `string` | `""` | - | A string of classes to assign to the icon element. This is useful for implementation with CSS frameworks, such as Tailwind CSS. |
 | size | `number \| string` | `24` | - | The size of the icon. Set both width and height of the icon. |
 | stroke | `string` | `"currentColor"` | - | The stroke color of the icon ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke)). |
 | stroke-linecap | `string` | `"round"` | butt, round, square | Specifies the shape to be used at the end of open subpaths when they are stroked ([spec](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap)). |

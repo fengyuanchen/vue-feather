@@ -78,6 +78,17 @@ describe('props', () => {
     expect(wrapper.find('svg').attributes('fill')).toBe('red');
   });
 
+  it('iconClass', () => {
+    const wrapper = mount(VueFeather, {
+      props: {
+        iconClass: 'custom-class',
+      },
+    });
+
+    expect(wrapper.props('iconClass')).toBe('custom-class');
+    expect(wrapper.find('svg').attributes('class')).toContain('custom-class');
+  });
+
   describe('size', () => {
     it('number', () => {
       const wrapper = mount(VueFeather, {
