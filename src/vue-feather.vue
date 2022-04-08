@@ -21,6 +21,11 @@ export default defineComponent({
       default: 'none',
     },
 
+    iconClass: {
+      type: String,
+      default: '',
+    },
+
     size: {
       type: [Number, String],
       default: 24,
@@ -121,7 +126,7 @@ export default defineComponent({
             'stroke-linejoin': this.strokeLinejoin,
             'stroke-width': this.strokeWidth,
             width: isRemSize ? undefined : size,
-            class: [icon.attrs.class, 'vue-feather__content'],
+            class: [icon.attrs.class, 'vue-feather__content', this.iconClass],
             innerHTML: icon.contents,
           },
         ),
