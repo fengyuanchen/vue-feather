@@ -48,7 +48,7 @@ export default defineComponent({
 
     tag: {
       type: String,
-      default: 'i',
+      default: 'i', // if someone define foo in frontend while calling <vue-feather tag="foo" type="feather"><vue-feather> then it'll create only svg tag. 
     },
 
     type: {
@@ -85,34 +85,9 @@ export default defineComponent({
 
     const icon = feather.icons[type];
 
-    return h(
-      this.tag as string,
-
-      {
-        ...this.$attrs,
-        'data-name': type,
-        'data-tags': icon.tags,
-        'data-type': type,
-
-        class: {
-          'vue-feather': true,
-          [`vue-feather--${type}`]: type,
-          [`vue-feather--${animation}`]: animation,
-          [`vue-feather--${animationSpeed}`]: animationSpeed,
-        },
-
-        style: isRemSize ? {
-          height: size,
-          width: size,
-        } : undefined,
-      },
-
-      [
-        h(
-          'svg',
-
-          // XXX: The `width` and `height` attributes do not support the `rem` unit in Safari (#13).
-          {
+    //foo for  if (somebody define food in tag then it will be check in here then it will only create svg tag not parent tag (i) )
+     if(this.tag == "foo"){
+        return h("svg", {
             ...icon.attrs,
             fill: this.fill,
             height: isRemSize ? undefined : size,
@@ -123,10 +98,47 @@ export default defineComponent({
             width: isRemSize ? undefined : size,
             class: [icon.attrs.class, 'vue-feather__content'],
             innerHTML: icon.contents,
+            id: this.$attrs['id'], // if foo then get id attr into svg tag (just for some who don't want any tag to be parent of svg tag).
+        });
+      }else{// else it will be creating as before like : i tag as default or any tag someone define  as parent and then child tag will svg.
+        return h(
+          this.tag as string,
+          {
+            ...this.$attrs,
+            'data-name': type,
+            // 'data-tags': isTag != undefined ? icon.tags : this.id,
+            'data-tags': icon.tags,
+            'data-type': type,
+            class: {
+                'vue-feather': true,
+                [`vue-feather--${type}`]: type,
+                [`vue-feather--${animation}`]: animation,
+                [`vue-feather--${animationSpeed}`]: animationSpeed,
+            },
+            style: isRemSize ? {
+                height: size,
+                width: size,
+            } : undefined,
           },
-        ),
-      ],
-    );
+          [
+            h('svg', 
+              // XXX: The `width` and `height` attributes do not support the `rem` unit in Safari (#13).
+              {
+                  ...icon.attrs,
+                  fill: this.fill,
+                  height: isRemSize ? undefined : size,
+                  stroke: this.stroke,
+                  'stroke-linecap': this.strokeLinecap,
+                  'stroke-linejoin': this.strokeLinejoin,
+                  'stroke-width': this.strokeWidth,
+                  width: isRemSize ? undefined : size,
+                  class: [icon.attrs.class, 'vue-feather__content'],
+                  innerHTML: icon.contents,
+              }
+            ),
+          ]
+        );
+      }
   },
 });
 </script>
